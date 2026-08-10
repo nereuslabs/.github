@@ -34,11 +34,17 @@ _Personal AI‑tutor that turns "I want to learn" into proven skills._
 
 | Агент | Задача |
 |---|---|
-| 🧭 **Coach** | Строит персональную дорожную карту (roadmap) под цель, уровень и сроки |
-| 📚 **Tutor** | Выдаёт материал и практические задания, закрывает слабые места |
-| ✅ **Examiner** | Проверяет ответы: **PASS** — двигаемся дальше, **RETRY** — повторяем |
+| ◈ **Coach** | Строит персональную дорожную карту (roadmap) под цель, уровень и сроки |
+| ✎ **Tutor** | Выдаёт материал и практические задания, закрывает слабые места |
+| ✓ **Examiner** | Проверяет ответы: **PASS** — двигаемся дальше, **RETRY** — повторяем |
 
-Стек: Python 3.11 · LangGraph · OpenRouter · ChromaDB · Chainlit.
+Стек:
+
+[![Python](https://img.shields.io/badge/Python%203.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-0F766E?style=flat-square)](https://github.com/langchain-ai/langgraph)
+[![OpenRouter](https://img.shields.io/badge/OpenRouter-111827?style=flat-square)](https://openrouter.ai/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-6D28D9?style=flat-square)](https://www.trychroma.com/)
+[![Chainlit](https://img.shields.io/badge/Chainlit-0284C7?style=flat-square)](https://chainlit.io/)
 
 ## Принципы
 
@@ -51,9 +57,9 @@ _Personal AI‑tutor that turns "I want to learn" into proven skills._
 
 Статус и планы — в [публичной доске проекта](https://github.com/orgs/nereuslabs/projects/1).
 
-- ✅ Шаги 1–6: автомат, LLM‑рантайм, память, RAG, Web‑UI, персистентность
-- ✅ Миграция на OpenRouter (чат + эмбеддинги), офлайн‑режим для CI/демо
-- 🚧 **MVP 1.0 — готовится к релизу**
+- ✔ Шаги 1–6: автомат, LLM‑рантайм, память, RAG, Web‑UI, персистентность
+- ✔ Миграция на OpenRouter (чат + эмбеддинги), офлайн‑режим для CI/демо
+- ◔ **MVP 1.0 — готовится к релизу**
 
 ## Присоединяйтесь
 
