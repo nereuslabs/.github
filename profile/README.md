@@ -1,78 +1,84 @@
 <div align="center">
 
+<a href="https://github.com/nereuslabs/nereus">
+  <img src="https://raw.githubusercontent.com/nereuslabs/nereus/main/assets/logo.svg" width="140" height="140" alt="Nereus Labs Socratic Lighthouse" />
+</a>
+
 # 🌊 Nereus Labs
 
-**Личный ИИ‑тьютор, который не устаёт и не льстит.**
-От «хочу научиться» — до уверенных практических навыков.
+<a href="https://github.com/nereuslabs/nereus">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&pause=1200&color=00F5D4&center=true&vCenter=true&width=620&lines=The+Open-Source+AI+Mentor+for+Software+Craftsmanship;Honest+%E2%80%A2+Adaptive+%E2%80%A2+Execution-Driven;From+Your+First+Line+of+Code+to+Production+Mastery" alt="Typing SVG" />
+</a>
 
-_Personal AI‑tutor that turns "I want to learn" into proven skills._
-
-[![Сайт](https://img.shields.io/badge/Сайт-nereuslabs.github.io-0b7285?style=flat-square&logo=github&logoColor=white)](https://nereuslabs.github.io/landing/)
-[![Репозиторий](https://img.shields.io/badge/Репозиторий-Nereus-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/nereuslabs/Nereus)
-[![Roadmap](https://img.shields.io/badge/Roadmap-Project%20Board-6f42c1?style=flat-square&logo=github&logoColor=white)](https://github.com/orgs/nereuslabs/projects/1)
-[![Email](https://img.shields.io/badge/Email-develop.nereus@gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:develop.nereus@gmail.com)
+<p align="center">
+  <a href="https://nereuslabs.github.io/landing/"><img src="https://img.shields.io/badge/Website-nereuslabs.github.io-0b7285?style=for-the-badge&logo=github&logoColor=white" alt="Website" /></a>
+  <a href="https://github.com/nereuslabs/nereus"><img src="https://img.shields.io/badge/Nereus_2.0-Rust-DEA584?style=for-the-badge&logo=rust&logoColor=white" alt="Rust 2.0" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-00BBF9?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT" /></a>
+  <a href="mailto:develop.nereus@gmail.com"><img src="https://img.shields.io/badge/Contact-develop.nereus%40gmail.com-FF0055?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
 
 </div>
 
 ---
 
-## Почему мы
+## ⚡ Welcome to the Nereus 2.0 Era
 
-В мире уже миллионы курсов — а навыков у людей от этого больше не стало.
+> In Greek mythology, **Nereus** was the wise "Old Man of the Sea" who spoke only truth and guided sailors through treacherous waters. We built Nereus with that exact ethos: an AI mentor that doesn't flatter you or give you answers, but challenges you to truly understand and master programming.
 
-Мы покупаем курс, смотрим видео, забываем. Нам никто не строит маршрут под наш уровень, не даёт практики с обратной связью и не говорит честно: «Ты пока не готов — повтори».
+After successfully proving our multi-agent learning automaton in Python (v1.0 – v1.1), we are launching a brand-new epoch: **Nereus 2.0**, rewritten from the ground up in **Rust**.
 
-**Nereus** — в древнегреческих мифах морской старец, который всегда говорил правду и помогал мореплавателям не сбиться с пути. Мы назвали проект в его честь: ИИ‑тьютор, который ведёт ученика до результата и никогда не льстит.
+### Why Nereus 2.0?
 
-## Миссия
+* 🦀 **Engineered in Rust**: Ultra-fast, single static binary with zero runtime dependencies.
+* 🛡️ **Algebraic State Automaton**: Exhaustive compile-time state transitions — no opaque frameworks or fragile graph pickling.
+* 💻 **Interactive TUI Cockpit**: A slick, retro-modern terminal user interface (Ratatui) with split panes for live roadmaps, interactive exercises, and streaming Socratic guidance.
+* 🧪 **Execution-Driven Validation**: We don't just ask an LLM if your code looks good; we compile it, test it in an isolated sandbox, and use compiler feedback to teach you how to debug.
+* 📜 **Permissive MIT License**: 100% open-source for the global developer community.
 
-> Превратить «хочу научиться» в **доказанные практические навыки**: собрать персональный roadmap, дать практику и честно проверить результат — **PASS** или **RETRY**, без «все молодцы».
+---
 
-## Что мы строим
+## 🏛️ Architecture: The 4 Autonomous Agents
 
-**Nereus** — автоматизированный учебный процесс на трёх агентах:
+Nereus replaces unstructured chat with a deterministic learning lifecycle:
 
-| Агент | Задача |
-|---|---|
-| ◈ **Coach** | Строит персональную дорожную карту (roadmap) под цель, уровень и сроки |
-| ✎ **Tutor** | Выдаёт материал и практические задания, закрывает слабые места |
-| ✓ **Examiner** | Проверяет ответы: **PASS** — двигаемся дальше, **RETRY** — повторяем |
+```
+[ Diagnostic Agent ] ──► [ Weakness Report ]
+                                │
+                                ▼
+                         [ Coach Agent ] (Dynamic Roadmap Generator)
+                                │
+                                ▼
+        ┌───────────────► [ Tutor Agent ] (Theory & Interactive Task)
+        │                       │
+        │                       ▼
+        │                [ Examiner Agent ] (Sandbox Test & Evaluation)
+        │                       │
+        │        ┌──────────────┴──────────────┐
+        │        ▼                             ▼
+      [ RETRY: Socratic Hints ]      [ PASS: Advance Topic ] ──► [ Next / Complete ]
+```
 
-Стек:
+| Agent | Mission |
+| :--- | :--- |
+| 🔍 **Diagnostic Agent** | Evaluates current skill baseline through adaptive probing before learning begins. |
+| 🧭 **Coach Agent** | Synthesizes goals, deadlines, and diagnostic gaps into a prioritized, milestone-driven roadmap. |
+| 📖 **Tutor Agent** | Delivers bite-sized conceptual materials and presents interactive coding challenges. |
+| ⚖️ **Examiner Agent** | Rigorously evaluates test cases and provides targeted feedback — `PASS` or `RETRY`. |
 
-[![Python](https://img.shields.io/badge/Python%203.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-0F766E?style=flat-square)](https://github.com/langchain-ai/langgraph)
-[![OpenRouter](https://img.shields.io/badge/OpenRouter-111827?style=flat-square)](https://openrouter.ai/)
-[![ChromaDB](https://img.shields.io/badge/ChromaDB-6D28D9?style=flat-square)](https://www.trychroma.com/)
-[![Chainlit](https://img.shields.io/badge/Chainlit-0284C7?style=flat-square)](https://chainlit.io/)
+---
 
-## Принципы
+## 📂 Active Repositories
 
-- **Честность вместо лести.** Экзаменатор не ставит «пятёрку за старание» — только за доказанный уровень.
-- **Roadmap, а не хаос.** Обучение — это процесс с планом, вехами и дедлайном.
-- **Практика важнее просмотра.** Навык закрепляется делом, а не видео.
-- **Открытость.** Код, дорожная карта и прогресс — публичны. Смотрите, как мы строим продукт.
-
-## Дорожная карта
-
-Статус и планы — в [публичной доске проекта](https://github.com/orgs/nereuslabs/projects/1).
-
-- ✔ Шаги 1–6: автомат, LLM‑рантайм, память, RAG, Web‑UI, персистентность
-- ✔ Миграция на OpenRouter (чат + эмбеддинги), офлайн‑режим для CI/демо
-- ◔ **MVP 1.0 — готовится к релизу**
-
-## Присоединяйтесь
-
-Мы строим продукт в открытую и рады единомышленникам:
-
-- Обсудить идеи и баги — [issues](https://github.com/nereuslabs/Nereus/issues)
-- Начать вклад — [CONTRIBUTING.md](https://github.com/nereuslabs/Nereus/blob/develop/CONTRIBUTING.md)
-- Следить за прогрессом — [доска проекта](https://github.com/orgs/nereuslabs/projects/1)
+| Repository | Status | Description |
+| :--- | :---: | :--- |
+| **[`nereuslabs/nereus`](https://github.com/nereuslabs/nereus)** | 🚀 **Active (v2.0)** | The next-generation Rust-powered AI coding cockpit and automaton. |
+| **[`nereuslabs/nereus-v1`](https://github.com/nereuslabs/nereus-v1)** | 📦 **Archived (v1.x)** | The original Python proof-of-concept (LangGraph + Chainlit). |
+| **[`nereuslabs/landing`](https://github.com/nereuslabs/landing)** | 🌐 **Web** | Community landing page and showcase. |
 
 ---
 
 <div align="center">
 
-_🌊 Nereus Labs — учимся системно, проверяем честно._
+_Crafted with precision by Nereus Labs. Licensed under the MIT License._
 
 </div>
